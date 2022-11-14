@@ -26,30 +26,30 @@ double a28 = 0;
 
 double MultDegree(int degree, double arg1)
 {
-    int count=1;
-    double res=arg1;
+    int count = 1;
+    double res = arg1;
     while (count < degree)
     {
-        res=res*arg1;
+        res = res * arg1;
         count++;
     }
     return res;
 }
 
-a3 = MultDegree(3,a);
-a10 = MultDegree(10,a);
+a3 = MultDegree(3, a);
+a10 = MultDegree(10, a);
 
-a4 = MultDegree(4,a);
-a20 = MultDegree(20,a);
+a4 = MultDegree(4, a);
+a20 = MultDegree(20, a);
 
-a5 = MultDegree(5,a);
-a13 = MultDegree(13,a);
+a5 = MultDegree(5, a);
+a13 = MultDegree(13, a);
 
-a2 = MultDegree(2,a);
-a17 = MultDegree(17,a);
+a2 = MultDegree(2, a);
+a17 = MultDegree(17, a);
 
-a12 = MultDegree(12,a);
-a28 = MultDegree(28,a);
+a12 = MultDegree(12, a);
+a28 = MultDegree(28, a);
 
 Console.WriteLine($"a) Число {a} в 3 степени = {a3}");
 Console.WriteLine($"б) Число {a} в 10 степени = {a10}");
