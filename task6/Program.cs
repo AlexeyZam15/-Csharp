@@ -2,8 +2,7 @@
 // а) расчета квадратного корня из любого элемента массива;
 // б) расчета среднего арифметического двух любых элементов массива.
 double[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-string str = string.Join(" ", array);
-Console.WriteLine($"Эллементы массива: {str}");
+Console.WriteLine($"Элементы массива: {string.Join(" ", array)}");
 
 char choice = Convert.ToChar("0");
 int number_choice = 0;
