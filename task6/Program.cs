@@ -20,17 +20,15 @@ while (number_choice == 0)
     else Console.WriteLine("Неправильный ввод");
 }
 
-void SqrRoot()
+if (number_choice == 1) 
 {
-    Console.Write("Укажите индекс нужного элемента массива: ");
+Console.Write("Укажите индекс нужного элемента массива: ");
     int index = Convert.ToInt32(Console.ReadLine());
     double root = Math.Sqrt(array[index]);
     Console.Write($"Квадратный корень элемента массива {array[index]} = {root}");
 }
 
-if (number_choice == 1) SqrRoot();
-
-void Average()
+if (number_choice == 2) 
 {
     Console.Write("Укажите индекс первого нужного элемента массива: ");
     int index1 = Convert.ToInt32(Console.ReadLine());
@@ -39,5 +37,3 @@ void Average()
     double average = (array[index1] + array[index2])/2;
     Console.Write($"Среднее арифметическое элементов массива {array[index1]} и {array[index2]} = {average}");
 }
-
-if (number_choice == 2) Average();
