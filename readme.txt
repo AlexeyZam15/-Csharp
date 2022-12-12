@@ -85,3 +85,6 @@ https://c-sharp.pro/wp-content/uploads/2020/11/d2.2-2.jpg
 
 task19 D2.3. Заполнить массив размером 6 x 6 так, как показано на рисунках а, б.
 https://c-sharp.pro/wp-content/uploads/2020/11/d2.3.jpg
+
+task20 D2.4. Заполнить двумерный массив так, как представлено на рис. a — р.
+https://c-sharp.pro/wp-content/uploads/2020/11/d2.4_1.jpg
