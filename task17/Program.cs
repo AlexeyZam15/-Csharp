@@ -1,4 +1,4 @@
-﻿// матрицу с помощью рекурсий.
+﻿//Вывести матрицу с помощью рекурсий.
 
 int[,] CreateMatrixIncInt(int rows, int columns, int startNumber)
 {
