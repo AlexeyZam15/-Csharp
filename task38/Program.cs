@@ -33,8 +33,6 @@ void PrintmatrixIntSpecial(int[,] matrix)
                 else matrix[i, 1] = 0;
             if (matrix[i, 1] == 0)
                 Console.Write($"{matrix[i, 0],3}");
-            else
-                Console.Write($"{" ",3}");
         }
         Console.WriteLine();
     }
@@ -44,4 +42,6 @@ Console.Write($"Введите кол-во шкафчиков: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix1 = CreateIncIntMatrix(n, 2);
+Console.WriteLine($"Открытые шкафчики: ");
+
 PrintmatrixIntSpecial(matrix1);
