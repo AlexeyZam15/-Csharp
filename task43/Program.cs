@@ -1,6 +1,8 @@
 ﻿// Даны два натуральных числа a и b.  
 // Вычислите НОД(a,b) - наибольший общий делитель а и b.
 
+using System.Diagnostics;
+
 int a = 0;
 while (a <= 0)
 {
@@ -19,6 +21,9 @@ while (b <= 0)
         Console.WriteLine("Введены неверные данные");
 }
 
+Stopwatch sw = new();
+sw.Start();
+
 int nod = 1;
 int max = a;
 if (b > max) max = b;
@@ -31,4 +36,6 @@ for (int i = max; i > 1; i--)
     }
 }
 
+sw.Stop();
+Console.WriteLine($"Время выполнения программы = {sw.ElapsedMilliseconds} миллисекунд");
 Console.WriteLine($"НОД({a},{b}) = {nod}");
