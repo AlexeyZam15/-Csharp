@@ -111,28 +111,34 @@ int[] SortQuick(int[] collection, int left, int right, bool log = false)
 //     return -1;
 // }
 
-static int BinarySearch(int[] array, int searchedValue)
+static int BinarySearch(int[] array, int searchedValue, bool log = false)
 {
     int left = 0;
     int right = array.Length - 1;
     while (left <= right)
     {
         var middle = (left + right) / 2;
-
+        if (log == true)
+            Console.Write($"{left} {middle} {right}");
         if (searchedValue == array[middle])
         {
+            if (log == true)
+                Console.WriteLine(" =");
             return middle;
         }
         else if (searchedValue < array[middle])
         {
+            if (log == true)
+                Console.WriteLine(" <");
             right = middle - 1;
         }
         else
         {
+            if (log == true)
+                Console.WriteLine(" >");
             left = middle + 1;
         }
     }
-    //ничего не нашли
     return -1;
 }
 
@@ -147,7 +153,7 @@ int searchNumber = Convert.ToInt32(Console.ReadLine());
 
 // int numberIndex = IntBinarySearchInArray(arr, searchNumber, false);
 
-int numberIndex = BinarySearch(arr, searchNumber);
+int numberIndex = BinarySearch(arr, searchNumber, true);
 
 Console.WriteLine(numberIndex != -1 ? $"Индекс числа {searchNumber} в массиве = {numberIndex}"
                                     : $"Число {searchNumber} не найдено в массиве");
