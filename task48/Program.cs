@@ -5,7 +5,7 @@
 
 using System.Diagnostics;
 
-int[] FillArrayRnd(int[] array, int min, int max, int startPos, int endPos)
+void FillArrayRnd(int[] array, int min, int max, int startPos, int endPos)
 {
     Random rnd = new();
 
@@ -13,7 +13,6 @@ int[] FillArrayRnd(int[] array, int min, int max, int startPos, int endPos)
     {
         array[i] = rnd.Next(min, max + 1);
     }
-    return array;
 }
 
 void ParallelFillArray(int[] array, int min, int max, int THREADS_NUMBER)
