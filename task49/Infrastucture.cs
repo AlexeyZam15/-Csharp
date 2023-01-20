@@ -1,5 +1,13 @@
 public static class Infrastucture
 {
+    /// <summary>
+    /// Метод заполнения массива случайными числами
+    /// </summary>
+    /// <param name="array">исходный массив</param>
+    /// <param name="min">минимальной число в диапазоне случайных чисел</param>
+    /// <param name="max">максимальное число в диапазоне случайных чисел</param>
+    /// <param name="startPos">индекс с которого начинается заполнение массива</param>
+    /// <param name="endPos">индекс которым заканчинается заполнение массива</param>
     public static void FillArrayRnd(int[] array, int min, int max, int startPos, int endPos)
     {
         Random rnd = new();
@@ -10,6 +18,13 @@ public static class Infrastucture
         }
     }
 
+/// <summary>
+/// Метод параллельного заполнения массива случайными числами
+/// </summary>
+/// <param name="array">исходный массив</param>
+/// <param name="min">минимальной число в диапазоне случайных чисел</param>
+/// <param name="max">максимальное число в диапазоне случайных чисел</param>
+/// <param name="THREADS_NUMBER">количество поток</param>
     public static void ParallelFillArray(int[] array, int min, int max, int THREADS_NUMBER)
     {
         int size = array.Length;
