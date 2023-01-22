@@ -18,13 +18,13 @@ public static class Infrastucture
         }
     }
 
-/// <summary>
-/// Метод параллельного заполнения массива случайными числами
-/// </summary>
-/// <param name="array">исходный массив</param>
-/// <param name="min">минимальной число в диапазоне случайных чисел</param>
-/// <param name="max">максимальное число в диапазоне случайных чисел</param>
-/// <param name="THREADS_NUMBER">количество поток</param>
+    /// <summary>
+    /// Метод параллельного заполнения массива случайными числами
+    /// </summary>
+    /// <param name="array">исходный массив</param>
+    /// <param name="min">минимальной число в диапазоне случайных чисел</param>
+    /// <param name="max">максимальное число в диапазоне случайных чисел</param>
+    /// <param name="THREADS_NUMBER">количество поток</param>
     public static void ParallelFillArray(int[] array, int min, int max, int THREADS_NUMBER)
     {
         int size = array.Length;
@@ -45,4 +45,34 @@ public static class Infrastucture
         }
     }
 
+    /// <summary>
+    /// Метод проверки равенства двух массивов
+    /// </summary>
+    /// <param name="array">Первый массив</param>
+    /// <param name="array1">Второй массив</param>
+    /// <returns></returns>
+    public static bool EqualityArrays(int[] array, int[] array1)
+    {
+        bool res = true;
+        int size = array.Length;
+        if (size == array1.Length)
+            for (int i = 0; i < array.Length; i++)
+                res = res && (array[i] == array1[i]);
+        else
+            res = false;
+        return res;
+    }
+
+    /// <summary>
+    /// Метод печати массива
+    /// </summary>
+    /// <param name="array">Массив</param>
+    public static void PrintArray(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write($"{array[i],3}");
+        }
+        Console.WriteLine();
+    }
 }
