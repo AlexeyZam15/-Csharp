@@ -18,6 +18,16 @@ public static class Infrastucture
         }
     }
 
+    public static void FillListRnd(List<int> array, int min, int max, int startPos, int endPos)
+    {
+        Random rnd = new();
+
+        for (int i = startPos; i < endPos; i++)
+        {
+            array.Add(rnd.Next(min, max + 1));
+        }
+    }
+
     /// <summary>
     /// Метод параллельного заполнения массива случайными числами
     /// </summary>
@@ -63,6 +73,18 @@ public static class Infrastucture
         return res;
     }
 
+     public static bool EqualityLists(List<int> array, List<int> array1)
+    {
+        bool res = true;
+        int size = array.Count;
+        if (size == array1.Count)
+            for (int i = 0; i < size; i++)
+                res = res && (array[i] == array1[i]);
+        else
+            res = false;
+        return res;
+    }
+
     /// <summary>
     /// Метод печати массива
     /// </summary>
@@ -70,6 +92,15 @@ public static class Infrastucture
     public static void PrintArray(int[] array)
     {
         for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write($"{array[i],3}");
+        }
+        Console.WriteLine();
+    }
+
+    public static void PrintList(List<int> array)
+    {
+        for (int i = 0; i < array.Count; i++)
         {
             Console.Write($"{array[i],3}");
         }
